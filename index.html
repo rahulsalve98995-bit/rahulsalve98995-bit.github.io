@@ -85,9 +85,16 @@ footer{text-align:center;padding:20px;background:#000}
 
  <!-- Resume Buttons -->
 <div style="margin-top:20px;">
-  <a href="Rahul_Salve_Resume.pdf" download class="btn">
-    ⬇ Download Resume (PDF)
-  </a>
+  <a href="Rahul_Salve_Resume.pdf"
+   download
+   onclick="gtag('event', 'resume_download', {
+     event_category: 'engagement',
+     event_label: 'Resume PDF',
+     value: 1
+   });">
+   Download Resume
+</a>
+
 
   <a href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view?usp=sharing"
      target="_blank"
@@ -133,6 +140,7 @@ footer{text-align:center;padding:20px;background:#000}
 
 </body>
 </html>
+
 
 
 

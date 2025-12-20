@@ -1,115 +1,105 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Rahul Salve | IT Support Engineer</title>
+<title>Rahul Salve | System & IT Support Engineer</title>
 
-<!-- SEO -->
 <meta name="description" content="Rahul Salve – System & IT Support Engineer Portfolio">
-<meta name="keywords" content="Rahul Salve, IT Support Engineer, Desktop Support, Portfolio">
 <meta name="author" content="Rahul Rajendra Salve">
-
-<!-- Google Verification -->
-<meta name="google-site-verification" content="oEe2eBX6B039nNjy_i0pC9W1kHTqxrPj4Q74cCakk2A">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MGH131L0"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-L8MGH131L0');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L8MGH131L0');
 </script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <style>
 :root{
  --bg:#0f2027;
+ --card:#102a33;
  --text:#ffffff;
- --card:#132a33;
  --accent:#00e5ff;
 }
 .light{
  --bg:#f4f6f8;
- --text:#111;
  --card:#ffffff;
+ --text:#000000;
  --accent:#0077ff;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:var(--bg);color:var(--text);transition:.3s}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);transition:.3s}
 
 /* NAVBAR */
 nav{
  position:fixed;top:0;width:100%;
- display:flex;justify-content:center;gap:25px;
- padding:15px;background:#000;z-index:100;
- transition:.3s;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:15px 25px;background:#000;z-index:1000
 }
-nav.scrolled{box-shadow:0 4px 15px rgba(0,0,0,.5)}
-nav a{color:var(--accent);text-decoration:none;font-weight:bold}
-
-/* TOGGLE */
-.toggle{
- position:fixed;top:15px;right:15px;
- cursor:pointer;background:var(--card);
- padding:8px 12px;border-radius:20px;
-}
+nav a{color:var(--accent);margin-left:15px;text-decoration:none;font-weight:bold}
+.toggle{cursor:pointer;color:#fff}
 
 /* HERO */
 .hero{
- min-height:100vh;
- display:flex;flex-direction:column;
- justify-content:center;align-items:center;
- text-align:center;padding:80px 20px;
+ min-height:100vh;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;text-align:center;padding:20px
 }
 .hero h1{font-size:42px}
 .hero span{color:var(--accent)}
+.hero p{margin-top:10px;font-size:18px}
 
-/* BUTTONS */
 .btn{
- margin:10px;padding:14px 26px;
- background:var(--accent);color:#000;
- border-radius:30px;text-decoration:none;
- font-weight:bold;display:inline-block;
- transition:.3s;
+ display:inline-block;margin:15px;padding:12px 26px;
+ border-radius:30px;background:var(--accent);
+ color:#000;text-decoration:none;font-weight:bold;
+ transition:.3s
 }
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.3)}
+.btn:hover{transform:scale(1.08)}
 
 /* SECTIONS */
 section{max-width:1100px;margin:auto;padding:80px 20px}
-h2{color:var(--accent);margin-bottom:25px}
+h2{color:var(--accent);margin-bottom:30px;text-align:center}
 
 /* SKILLS */
 .skills{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:20px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+ gap:20px
 }
 .skill{
- background:var(--card);padding:20px;
- border-radius:12px;text-align:center;
- transition:.3s;
+ background:var(--card);padding:20px;border-radius:12px;
+ text-align:center;transition:.3s
 }
-.skill:hover{transform:translateY(-5px)}
-.skill i{font-size:28px;color:var(--accent)}
+.skill:hover{transform:translateY(-6px)}
+.skill i{font-size:30px;color:var(--accent)}
 
-/* TIMELINE */
-.timeline{border-left:3px solid var(--accent);padding-left:30px}
+/* EXPERIENCE */
+.timeline{border-left:3px solid var(--accent);padding-left:25px}
 .event{margin-bottom:20px;position:relative}
 .event::before{
- content:"";width:14px;height:14px;
- background:var(--accent);border-radius:50%;
- position:absolute;left:-38px;top:4px
+ content:"";width:14px;height:14px;background:var(--accent);
+ border-radius:50%;position:absolute;left:-32px;top:5px
 }
 
 /* CONTACT */
-form{max-width:400px;margin:auto}
+form{
+ max-width:500px;margin:auto;
+ display:flex;flex-direction:column;gap:15px
+}
 input,textarea{
- width:100%;padding:12px;margin-bottom:10px;
- border:none;border-radius:6px;
+ padding:12px;border-radius:8px;border:none;font-size:15px
+}
+button{
+ padding:12px;border:none;border-radius:30px;
+ background:var(--accent);font-weight:bold;cursor:pointer
 }
 
 /* FOOTER */
@@ -118,101 +108,116 @@ footer{text-align:center;padding:20px;background:#000}
 /* WHATSAPP */
 .whatsapp{
  position:fixed;bottom:20px;right:20px;
- background:#25D366;color:white;
- padding:14px 18px;border-radius:50px;
- text-decoration:none;font-weight:bold;
+ background:#25D366;color:#fff;
+ padding:14px 20px;border-radius:50px;
+ text-decoration:none;font-weight:bold
 }
 
 /* MOBILE */
 @media(max-width:600px){
+ nav{flex-direction:column}
  .hero h1{font-size:32px}
- nav{gap:15px;font-size:14px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="toggle" onclick="toggleTheme()">🌙 / ☀️</div>
-
-<nav id="navbar">
- <a href="#about">About</a>
- <a href="#skills">Skills</a>
- <a href="#experience">Experience</a>
- <a href="#contact">Contact</a>
+<nav>
+ <div><strong>Rahul Salve</strong></div>
+ <div>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  <span class="toggle" onclick="toggleMode()">🌙</span>
+ </div>
 </nav>
 
 <div class="hero">
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
  <p>System & IT Support Engineer</p>
 
- <a class="btn" href="Rahul_Salve_Resume.pdf"
- onclick="gtag('event','resume_download')"
- download>⬇ Download Resume</a>
+ <a href="Rahul_Salve_Resume.pdf" download class="btn"
+ onclick="gtag('event','resume_download')">
+ Download Resume
+ </a>
 
- <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
- target="_blank">👁 View Resume</a>
+ <a href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
+ target="_blank" class="btn">👁 View Resume</a>
 </div>
 
 <section id="about">
- <h2>About Me</h2>
- <p>IT Support Engineer with 3+ years of experience in enterprise IT support, networking, cloud tools and system administration.</p>
+<h2>About Me</h2>
+<p style="text-align:center">
+IT Support Engineer with 3+ years experience in Desktop Support,
+Networking, Windows OS, Office 365 and Cloud Tools.
+</p>
 </section>
 
 <section id="skills">
- <h2>Skills</h2>
- <div class="skills">
-  <div class="skill"><i>💻</i><p>Desktop Support</p></div>
-  <div class="skill"><i>🌐</i><p>Networking</p></div>
-  <div class="skill"><i>🪟</i><p>Windows OS</p></div>
-  <div class="skill"><i>☁️</i><p>Office 365</p></div>
-  <div class="skill"><i>🔐</i><p>Active Directory</p></div>
-  <div class="skill"><i>🧰</i><p>Remote Tools</p></div>
- </div>
+<h2>Skills</h2>
+<div class="skills">
+ <div class="skill"><i>🖥</i><p>Desktop Support</p></div>
+ <div class="skill"><i>🌐</i><p>Networking</p></div>
+ <div class="skill"><i>🪟</i><p>Windows Server</p></div>
+ <div class="skill"><i>☁</i><p>Office 365</p></div>
+ <div class="skill"><i>🔒</i><p>IT Security</p></div>
+</div>
 </section>
 
 <section id="experience">
- <h2>Experience</h2>
- <div class="timeline">
-  <div class="event">2024 – Present: System Engineer @ Flipkart</div>
-  <div class="event">2023 – 2024: Desktop Support @ L&T</div>
-  <div class="event">2022 – 2023: Apprentice @ L&T</div>
- </div>
+<h2>Experience</h2>
+<div class="timeline">
+ <div class="event">2024 – Present : System Engineer @ Flipkart</div>
+ <div class="event">2023 – 2024 : Desktop Support @ L&T</div>
+ <div class="event">2022 – 2023 : Apprentice @ L&T</div>
+</div>
 </section>
 
 <section id="contact">
- <h2>Contact</h2>
- <form onsubmit="contactEvent()">
-  <input type="text" placeholder="Name" required>
-  <input type="email" placeholder="Email" required>
-  <textarea placeholder="Message" required></textarea>
-  <button class="btn" type="submit">Send Message</button>
- </form>
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+ <input type="text" id="name" placeholder="Your Name" required>
+ <input type="email" id="email" placeholder="Your Email" required>
+ <textarea id="message" placeholder="Your Message" required></textarea>
+ <button type="submit">Send Message</button>
+</form>
+
+<p id="status" style="text-align:center;margin-top:10px"></p>
 </section>
 
-<footer>© 2025 Rahul Rajendra Salve</footer>
+<footer>
+© 2025 Rahul Rajendra Salve
+</footer>
 
 <a class="whatsapp"
- href="https://wa.me/917016748153"
+ href="https://wa.me/917016748153?text=Hi Rahul, I saw your portfolio"
  onclick="gtag('event','whatsapp_click')"
  target="_blank">💬 WhatsApp</a>
 
 <script>
-/* Sticky Navbar */
-window.addEventListener("scroll",()=>{
- document.getElementById("navbar")
- .classList.toggle("scrolled",window.scrollY>10);
+emailjs.init("_DGSZ1kuG7V7XuGf");
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+ e.preventDefault();
+
+ emailjs.send("service_g20uiby","template_6nlns0b",{
+  from_name:document.getElementById("name").value,
+  from_email:document.getElementById("email").value,
+  message:document.getElementById("message").value
+ }).then(()=>{
+  document.getElementById("status").innerText="✅ Message Sent Successfully";
+  gtag('event','contact_submit');
+  this.reset();
+ },()=>{
+  document.getElementById("status").innerText="❌ Error! Try again";
+ });
 });
 
-/* Dark Light */
-function toggleTheme(){
+function toggleMode(){
  document.body.classList.toggle("light");
-}
-
-/* Contact Tracking */
-function contactEvent(){
- gtag('event','contact_submit');
- alert("Message submitted (tracking enabled)");
 }
 </script>
 

@@ -4,188 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Verification -->
-<meta name="google-site-verification" content="oEe2eBX6B039nNjy_i0pC9W1kHTqxrPj4Q74cCakk2A" />
-
-<title>Rahul Salve | System & IT Support Engineer</title>
+<title>Rahul Salve | IT Support Engineer</title>
 
 <!-- SEO -->
-<meta name="description" content="Rahul Salve is a professional IT Support Engineer with experience in Desktop Support, Networking, Windows OS, Office 365 and Cloud Tools.">
-<meta name="keywords" content="Rahul Salve, IT Support Engineer, Desktop Support, Networking, Portfolio">
+<meta name="description" content="Rahul Salve – System & IT Support Engineer Portfolio">
+<meta name="keywords" content="Rahul Salve, IT Support Engineer, Desktop Support, Portfolio">
 <meta name="author" content="Rahul Rajendra Salve">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Rahul Salve | IT Support Engineer">
-<meta property="og:description" content="Official portfolio of Rahul Salve – System & IT Support Engineer.">
-<meta property="og:url" content="https://rahulsalve98995-bit.github.io/">
-<meta property="og:type" content="website">
+<!-- Google Verification -->
+<meta name="google-site-verification" content="oEe2eBX6B039nNjy_i0pC9W1kHTqxrPj4Q74cCakk2A">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MGH131L0"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L8MGH131L0');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L8MGH131L0');
 </script>
 
 <style>
-/* ===== RESET ===== */
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#0b1c24;color:#fff}
+:root{
+ --bg:#0f2027;
+ --text:#ffffff;
+ --card:#132a33;
+ --accent:#00e5ff;
+}
+.light{
+ --bg:#f4f6f8;
+ --text:#111;
+ --card:#ffffff;
+ --accent:#0077ff;
+}
 
-/* ===== NAVBAR ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:var(--bg);color:var(--text);transition:.3s}
+html{scroll-behavior:smooth}
+
+/* NAVBAR */
 nav{
  position:fixed;top:0;width:100%;
- display:flex;justify-content:center;gap:30px;
- background:#000;padding:15px;z-index:1000
+ display:flex;justify-content:center;gap:25px;
+ padding:15px;background:#000;z-index:100;
+ transition:.3s;
 }
-nav a{color:#00e5ff;text-decoration:none;font-weight:600}
-nav a:hover{color:#fff}
+nav.scrolled{box-shadow:0 4px 15px rgba(0,0,0,.5)}
+nav a{color:var(--accent);text-decoration:none;font-weight:bold}
 
-/* ===== HERO ===== */
+/* TOGGLE */
+.toggle{
+ position:fixed;top:15px;right:15px;
+ cursor:pointer;background:var(--card);
+ padding:8px 12px;border-radius:20px;
+}
+
+/* HERO */
 .hero{
  min-height:100vh;
- padding-top:80px;
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
- text-align:center;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ text-align:center;padding:80px 20px;
 }
-.hero h1{font-size:48px;font-weight:700}
-.hero span{color:#00e5ff}
-.hero p{margin-top:10px;font-size:18px;opacity:0.85}
+.hero h1{font-size:42px}
+.hero span{color:var(--accent)}
 
-/* ===== BUTTONS ===== */
-.resume-buttons{
- margin-top:30px;
- display:flex;
+/* BUTTONS */
+.btn{
+ margin:10px;padding:14px 26px;
+ background:var(--accent);color:#000;
+ border-radius:30px;text-decoration:none;
+ font-weight:bold;display:inline-block;
+ transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.3)}
+
+/* SECTIONS */
+section{max-width:1100px;margin:auto;padding:80px 20px}
+h2{color:var(--accent);margin-bottom:25px}
+
+/* SKILLS */
+.skills{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
  gap:20px;
- flex-wrap:wrap;
- justify-content:center
 }
-.btn-primary{
- background:#00e5ff;
- color:#000;
- padding:14px 32px;
- border-radius:30px;
- text-decoration:none;
- font-weight:600;
- transition:0.3s
+.skill{
+ background:var(--card);padding:20px;
+ border-radius:12px;text-align:center;
+ transition:.3s;
 }
-.btn-primary:hover{background:#00bcd4}
+.skill:hover{transform:translateY(-5px)}
+.skill i{font-size:28px;color:var(--accent)}
 
-.btn-outline{
- border:2px solid #00e5ff;
- color:#00e5ff;
- padding:14px 32px;
- border-radius:30px;
- text-decoration:none;
- font-weight:600;
- transition:0.3s
-}
-.btn-outline:hover{
- background:#00e5ff;
- color:#000
-}
-
-/* ===== SECTIONS ===== */
-section{
- max-width:1000px;
- margin:auto;
- padding:80px 20px
-}
-h2{color:#00e5ff;margin-bottom:20px}
-
-/* ===== TIMELINE ===== */
-.timeline{border-left:3px solid #00e5ff;padding-left:30px}
+/* TIMELINE */
+.timeline{border-left:3px solid var(--accent);padding-left:30px}
 .event{margin-bottom:20px;position:relative}
 .event::before{
- content:"";
- width:14px;height:14px;
- background:#00e5ff;
- border-radius:50%;
- position:absolute;
- left:-38px;top:5px
+ content:"";width:14px;height:14px;
+ background:var(--accent);border-radius:50%;
+ position:absolute;left:-38px;top:4px
 }
 
-/* ===== FOOTER ===== */
-footer{
- text-align:center;
- padding:20px;
- background:#000
+/* CONTACT */
+form{max-width:400px;margin:auto}
+input,textarea{
+ width:100%;padding:12px;margin-bottom:10px;
+ border:none;border-radius:6px;
 }
 
-/* ===== WHATSAPP ===== */
+/* FOOTER */
+footer{text-align:center;padding:20px;background:#000}
+
+/* WHATSAPP */
 .whatsapp{
- position:fixed;
- bottom:20px;
- right:20px;
- background:#25D366;
- color:#fff;
- padding:14px 20px;
- border-radius:30px;
- text-decoration:none;
- font-weight:600;
- box-shadow:0 4px 12px rgba(0,0,0,0.4)
+ position:fixed;bottom:20px;right:20px;
+ background:#25D366;color:white;
+ padding:14px 18px;border-radius:50px;
+ text-decoration:none;font-weight:bold;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
- .hero h1{font-size:34px}
- .hero p{font-size:16px}
- nav{gap:20px}
-}
-@media(max-width:480px){
- nav{flex-direction:column;gap:10px}
+/* MOBILE */
+@media(max-width:600px){
+ .hero h1{font-size:32px}
+ nav{gap:15px;font-size:14px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
+<div class="toggle" onclick="toggleTheme()">🌙 / ☀️</div>
+
+<nav id="navbar">
  <a href="#about">About</a>
+ <a href="#skills">Skills</a>
  <a href="#experience">Experience</a>
  <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
  <p>System & IT Support Engineer</p>
 
- <div class="resume-buttons">
-  <a class="btn-outline"
-     href="Rahul_Salve_Resume.pdf"
-     download
-     onclick="gtag('event','resume_download',{event_category:'engagement',event_label:'Resume PDF'});">
-     Download Resume
-  </a>
+ <a class="btn" href="Rahul_Salve_Resume.pdf"
+ onclick="gtag('event','resume_download')"
+ download>⬇ Download Resume</a>
 
-  <a class="btn-primary"
-     href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view?usp=sharing"
-     target="_blank">
-     👁 View Resume
-  </a>
- </div>
+ <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
+ target="_blank">👁 View Resume</a>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
  <h2>About Me</h2>
- <p>
- IT Support Engineer with 3+ years of experience in enterprise IT support,
- troubleshooting, networking, system administration and end-user support.
- </p>
+ <p>IT Support Engineer with 3+ years of experience in enterprise IT support, networking, cloud tools and system administration.</p>
 </section>
 
-<!-- EXPERIENCE -->
+<section id="skills">
+ <h2>Skills</h2>
+ <div class="skills">
+  <div class="skill"><i>💻</i><p>Desktop Support</p></div>
+  <div class="skill"><i>🌐</i><p>Networking</p></div>
+  <div class="skill"><i>🪟</i><p>Windows OS</p></div>
+  <div class="skill"><i>☁️</i><p>Office 365</p></div>
+  <div class="skill"><i>🔐</i><p>Active Directory</p></div>
+  <div class="skill"><i>🧰</i><p>Remote Tools</p></div>
+ </div>
+</section>
+
 <section id="experience">
- <h2>Experience Timeline</h2>
+ <h2>Experience</h2>
  <div class="timeline">
   <div class="event">2024 – Present: System Engineer @ Flipkart</div>
   <div class="event">2023 – 2024: Desktop Support @ L&T</div>
@@ -193,20 +180,41 @@ footer{
  </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
  <h2>Contact</h2>
- <p>Email: rahulsalve98995@gmail.com</p>
- <p>Phone: 7016748153</p>
+ <form onsubmit="contactEvent()">
+  <input type="text" placeholder="Name" required>
+  <input type="email" placeholder="Email" required>
+  <textarea placeholder="Message" required></textarea>
+  <button class="btn" type="submit">Send Message</button>
+ </form>
 </section>
 
-<footer>
-© 2025 Rahul Rajendra Salve
-</footer>
+<footer>© 2025 Rahul Rajendra Salve</footer>
 
 <a class="whatsapp"
- href="https://wa.me/917016748153?text=Hi Rahul, I saw your portfolio"
+ href="https://wa.me/917016748153"
+ onclick="gtag('event','whatsapp_click')"
  target="_blank">💬 WhatsApp</a>
+
+<script>
+/* Sticky Navbar */
+window.addEventListener("scroll",()=>{
+ document.getElementById("navbar")
+ .classList.toggle("scrolled",window.scrollY>10);
+});
+
+/* Dark Light */
+function toggleTheme(){
+ document.body.classList.toggle("light");
+}
+
+/* Contact Tracking */
+function contactEvent(){
+ gtag('event','contact_submit');
+ alert("Message submitted (tracking enabled)");
+}
+</script>
 
 </body>
 </html>

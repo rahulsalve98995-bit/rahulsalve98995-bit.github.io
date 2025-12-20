@@ -203,11 +203,20 @@ emailjs.init("_jDGSZ1kuG7V7XuGf");
 document.getElementById("contactForm").addEventListener("submit",function(e){
  e.preventDefault();
 
- emailjs.send("service_g20uiby","template_6nlns0b",{
-  from_name:document.getElementById("name").value,
-  from_email:document.getElementById("email").value,
-  message:document.getElementById("message").value
- }).then(()=>{
+  emailjs.send("service_g20uiby","template_6nlns0b",params)
+.then(function() {
+
+  // Auto-reply to sender
+  emailjs.send("service_g20uiby","template_r6kb4c6",params);
+
+});
+  var params = {
+  from_name: document.getElementById("name").value,
+  from_email: document.getElementById("email").value,
+  message: document.getElementById("message").value
+};
+
+                                                        .then(()=>{
   document.getElementById("status").innerText="✅ Message Sent Successfully";
   gtag('event','contact_submit');
   this.reset();
@@ -223,4 +232,5 @@ function toggleMode(){
 
 </body>
 </html>
+
 

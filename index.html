@@ -142,11 +142,12 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
  e.preventDefault();
  document.querySelector(".loader").style.display="block";
 
- const params={
-  from_name:name.value,
-  from_email:email.value,
-  message:message.value
- };
+ var params = {
+  name: document.getElementById("name").value,
+  from_email: document.getElementById("email").value,
+  message: document.getElementById("message").value
+};
+
 
  emailjs.send("service_g20uiby","template_6nlns0b",params)
  .then(()=>{
@@ -164,4 +165,5 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
 
 </body>
 </html>
+
 

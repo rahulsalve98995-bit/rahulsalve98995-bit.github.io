@@ -34,53 +34,91 @@ gtag('config', 'G-L8MGH131L0');
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:var(--bg);color:var(--text);transition:.3s}
+
 nav{
  position:fixed;top:0;width:100%;
  background:#000;padding:15px;
  display:flex;justify-content:center;gap:25px;z-index:99
 }
 nav a{color:var(--accent);text-decoration:none;font-weight:bold}
+
 .toggle{position:fixed;top:15px;right:20px;cursor:pointer}
 
 .hero{
- height:100vh;display:flex;
- flex-direction:column;justify-content:center;align-items:center;text-align:center
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding:20px
 }
 .hero span{color:var(--accent)}
+.hero p{max-width:700px;margin-top:10px;opacity:.9}
+
 .btn{
- margin-top:15px;padding:12px 30px;
+ margin:10px;padding:12px 30px;
  background:var(--accent);color:#000;
  border-radius:30px;text-decoration:none;font-weight:bold;
- transition:.3s
+ transition:.3s;display:inline-block
 }
 .btn:hover{transform:scale(1.05)}
 
 section{max-width:1000px;margin:auto;padding:80px 20px}
 h2{color:var(--accent);margin-bottom:20px}
 
+.about p{line-height:1.7}
+
 .skills{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+ gap:20px
 }
 .skill{
- background:#000;padding:20px;border-radius:12px;text-align:center
+ background:#000;
+ padding:20px;
+ border-radius:12px;
+ text-align:center
+}
+
+.timeline{
+ border-left:3px solid var(--accent);
+ padding-left:25px
+}
+.timeline div{
+ margin-bottom:20px
 }
 
 form{max-width:500px;margin:auto}
 input,textarea{
- width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:none
+ width:100%;padding:12px;
+ margin-bottom:12px;
+ border-radius:8px;border:none
 }
 button{
- width:100%;padding:14px;border:none;border-radius:30px;
- background:var(--accent);font-weight:bold;cursor:pointer
+ width:100%;padding:14px;
+ border:none;border-radius:30px;
+ background:var(--accent);
+ font-weight:bold;cursor:pointer
 }
-.loader{display:none;text-align:center;margin-top:10px}
-.success{display:none;color:#4CAF50;text-align:center}
-.error{display:none;color:#ff5252;text-align:center}
+
+.loader,.success,.error{
+ display:none;text-align:center;margin-top:10px
+}
+.success{color:#4CAF50}
+.error{color:#ff5252}
+
+footer{
+ text-align:center;
+ padding:20px;
+ background:#000
+}
 
 .whatsapp{
  position:fixed;bottom:20px;right:20px;
  background:#25D366;color:white;
- padding:14px 20px;border-radius:40px;text-decoration:none;font-weight:bold
+ padding:14px 20px;border-radius:40px;
+ text-decoration:none;font-weight:bold
 }
 </style>
 </head>
@@ -90,33 +128,78 @@ button{
 <nav>
  <a href="#about">About</a>
  <a href="#skills">Skills</a>
+ <a href="#experience">Experience</a>
  <a href="#contact">Contact</a>
 </nav>
 
 <div class="toggle" onclick="toggleMode()">🌓</div>
 
+<!-- HERO -->
 <div class="hero">
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
- <p>System & IT Support Engineer</p>
+ <h3>System & IT Support Engineer</h3>
+ <p>
+ Reliable IT Support Engineer with 3+ years of experience in enterprise IT environments,
+ specializing in desktop support, networking, and system troubleshooting.
+ </p>
+
  <a class="btn" href="Rahul_Salve_Resume.pdf"
- onclick="gtag('event','resume_download')">Download Resume</a>
- <a href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
- target="_blank" class="btn">👁 View Resume</a>
-  
+ onclick="gtag('event','resume_download')">⬇ Download Resume</a>
+
+ <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
+ target="_blank">👁 View Resume</a>
 </div>
 
+<!-- ABOUT -->
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>
+I am an IT Support Engineer with hands-on experience in desktop support,
+hardware & software troubleshooting, networking, and end-user support.
+I have worked in corporate environments such as L&T and Flipkart,
+supporting users and maintaining IT infrastructure efficiently.
+</p>
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
- <div class="skill">💻 Desktop Support</div>
- <div class="skill">🌐 Networking</div>
- <div class="skill">🪟 Windows & O365</div>
- <div class="skill">☁️ Cloud Tools</div>
+ <div class="skill">💻 Desktop & End User Support</div>
+ <div class="skill">🌐 Networking (LAN / WAN / TCP-IP)</div>
+ <div class="skill">🪟 Windows 10 / 11 & Office 365</div>
+ <div class="skill">☁️ Cloud Tools & Email Support</div>
+ <div class="skill">🛠 Hardware & Software Troubleshooting</div>
+ <div class="skill">📡 Printer & Peripheral Support</div>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Experience</h2>
+<div class="timeline">
+ <div>
+  <strong>System Engineer – Flipkart (2024 – Present)</strong>
+  <p>Providing L1/L2 IT support, system troubleshooting, installations and user assistance.</p>
+ </div>
+ <div>
+  <strong>Desktop Support Engineer – L&T (2023 – 2024)</strong>
+  <p>Desktop, network, printer support and enterprise IT operations.</p>
+ </div>
+ <div>
+  <strong>Apprentice – L&T (2022 – 2023)</strong>
+  <p>Hands-on experience in corporate IT infrastructure and support tasks.</p>
+ </div>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Me</h2>
+<p style="text-align:center;margin-bottom:20px">
+If you are looking for a reliable IT Support Engineer, feel free to contact me.
+</p>
+
 <form id="contactForm">
  <input id="name" placeholder="Your Name" required>
  <input id="email" type="email" placeholder="Your Email" required>
@@ -127,6 +210,11 @@ button{
  <div class="error">❌ Error! Try again</div>
 </form>
 </section>
+
+<footer>
+© 2025 Rahul Salve | IT Support Engineer  
+<br>Designed & Maintained by Rahul Salve
+</footer>
 
 <a class="whatsapp"
  href="https://wa.me/917016748153"
@@ -146,8 +234,7 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
   from_name: document.getElementById("name").value,
   from_email: document.getElementById("email").value,
   message: document.getElementById("message").value
-};
-
+ };
 
  emailjs.send("service_g20uiby","template_6nlns0b",params)
  .then(()=>{
@@ -155,7 +242,8 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
    gtag('event','contact_form_submit');
    document.querySelector(".loader").style.display="none";
    document.querySelector(".success").style.display="block";
-   this.reset();
+   document.querySelector(".error").style.display="none";
+   e.target.reset();
  },()=>{
    document.querySelector(".loader").style.display="none";
    document.querySelector(".error").style.display="block";
@@ -165,7 +253,3 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
 
 </body>
 </html>
-
-
-
-

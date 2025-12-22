@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rahul Salve | IT Support Engineer</title>
+
+<!-- SEO -->
+<meta name="description" content="Rahul Salve – IT Support & System Engineer with 3+ years of corporate experience in Desktop Support, Networking, Windows & Office 365.">
+<meta name="keywords" content="Rahul Salve, IT Support Engineer, System Engineer, Desktop Support, Surat IT Engineer">
+<meta name="author" content="Rahul Rajendra Salve">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MGH131L0"></script>
@@ -24,161 +30,138 @@ gtag('config', 'G-L8MGH131L0');
 
 <style>
 :root{
- --bg:#0b1220;
- --card:#111827;
- --accent:#0ea5e9;
- --text:#e5e7eb;
- --muted:#9ca3af;
+ --bg:#0f2027;
+ --card:#111;
+ --text:#ffffff;
+ --muted:#b0bec5;
+ --accent:#00e5ff;
 }
 .light{
- --bg:#f4f4f4;
+ --bg:#f4f6f8;
  --card:#ffffff;
- --text:#000;
+ --text:#000000;
  --muted:#444;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
-body{
- background:linear-gradient(120deg,#020617,#0b1220,#020617);
- color:var(--text);
- transition:.4s;
-}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);transition:.3s}
 
+/* NAVBAR */
 nav{
  position:fixed;top:0;width:100%;
- display:flex;justify-content:center;gap:30px;
- padding:18px;
- background:rgba(2,6,23,.75);
- backdrop-filter:blur(12px);
- z-index:100;
+ background:#000;
+ padding:14px;
+ display:flex;justify-content:center;gap:28px;
+ z-index:100
 }
 nav a{
  color:var(--accent);
  text-decoration:none;
  font-weight:600;
- position:relative;
 }
-nav a::after{
- content:"";
- position:absolute;
- left:0;bottom:-6px;
- width:0;height:2px;
- background:var(--accent);
- transition:.3s;
-}
-nav a:hover::after{width:100%}
 
+/* TOGGLE */
 .toggle{
- position:fixed;top:18px;right:20px;
- font-size:20px;cursor:pointer;
+ position:fixed;top:14px;right:18px;
+ cursor:pointer;font-size:20px
 }
 
+/* HERO */
 .hero{
  min-height:100vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- padding:20px;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ text-align:center;padding:20px
 }
-
-.badge{
- background:#22c55e;
- color:#022c22;
- padding:6px 14px;
- border-radius:20px;
- font-size:14px;
- margin-bottom:15px;
-}
-
-.hero h1{font-size:48px}
+.hero h1{font-size:42px}
 .hero span{color:var(--accent)}
-.hero p{
- max-width:720px;
- margin-top:12px;
- color:var(--muted);
- line-height:1.6;
+.hero p{max-width:720px;color:var(--muted);margin-top:10px}
+
+/* SNAPSHOT */
+.snapshot{
+ margin-top:25px;
+ display:flex;flex-wrap:wrap;gap:15px;
+ justify-content:center
 }
-
-.actions{margin-top:25px}
-
-.btn{
- padding:14px 34px;
- margin:8px;
+.snap{
+ background:var(--card);
+ padding:12px 18px;
  border-radius:30px;
- background:var(--accent);
- color:#021018;
- text-decoration:none;
- font-weight:600;
- display:inline-block;
- transition:.35s;
-}
-.btn:hover{
- transform:translateY(-4px);
- box-shadow:0 12px 30px rgba(14,165,233,.4);
+ font-size:14px
 }
 
+/* BUTTONS */
+.btn{
+ display:inline-block;
+ margin:12px;
+ padding:12px 30px;
+ background:var(--accent);
+ color:#000;
+ border-radius:30px;
+ font-weight:bold;
+ text-decoration:none;
+ transition:.3s
+}
+.btn:hover{transform:scale(1.05)}
+
+/* SECTIONS */
 section{
  max-width:1100px;
  margin:auto;
- padding:90px 20px;
+ padding:90px 20px
 }
-
 h2{
  color:var(--accent);
  margin-bottom:25px;
- font-size:32px;
+ text-align:center
 }
 
-.card{
- background:rgba(255,255,255,0.05);
- backdrop-filter:blur(12px);
- border-radius:18px;
- padding:28px;
- box-shadow:0 10px 30px rgba(0,0,0,.35);
+/* WHY HIRE ME */
+.why{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px
+}
+.why div{
+ background:var(--card);
+ padding:25px;
+ border-radius:16px
 }
 
-.about p{line-height:1.8;color:var(--muted)}
-
+/* SKILLS */
 .skills{
  display:grid;
- grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:25px;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px
 }
 .skill{
  background:var(--card);
- padding:25px;
- border-radius:18px;
- transition:.3s;
-}
-.skill:hover{
- transform:translateY(-6px);
- box-shadow:0 15px 40px rgba(0,0,0,.4);
+ padding:22px;
+ border-radius:16px;
+ text-align:center
 }
 
+/* TIMELINE */
 .timeline{
  border-left:3px solid var(--accent);
- padding-left:30px;
+ padding-left:25px
 }
-.timeline div{margin-bottom:30px}
-.timeline p{color:var(--muted);margin-top:6px}
+.timeline div{
+ margin-bottom:25px
+}
 
+/* CONTACT */
 form{
- max-width:520px;
- margin:auto;
- background:var(--card);
- padding:30px;
- border-radius:20px;
+ max-width:500px;
+ margin:auto
 }
 input,textarea{
  width:100%;
  padding:14px;
  margin-bottom:14px;
- border:none;
  border-radius:10px;
- background:#020617;
- color:white;
+ border:none
 }
 button{
  width:100%;
@@ -186,41 +169,53 @@ button{
  border:none;
  border-radius:30px;
  background:var(--accent);
- font-weight:600;
- cursor:pointer;
+ font-weight:bold;
+ cursor:pointer
 }
 
 .loader,.success,.error{
- display:none;
- text-align:center;
- margin-top:12px;
+ display:none;text-align:center;margin-top:12px
 }
-.success{color:#22c55e}
-.error{color:#ef4444}
+.success{color:#4CAF50}
+.error{color:#ff5252}
 
+/* SOCIAL */
+.social{
+ text-align:center;margin-top:20px
+}
+.social a{
+ margin:0 10px;
+ font-size:22px;
+ color:var(--accent);
+ text-decoration:none
+}
+
+/* FOOTER */
 footer{
+ background:#000;
  text-align:center;
- padding:30px;
- background:#020617;
- color:var(--muted);
+ padding:25px;
+ font-size:14px
 }
 
+/* WHATSAPP */
 .whatsapp{
  position:fixed;
- bottom:22px;
- right:22px;
+ bottom:20px;right:20px;
  background:#25D366;
  color:white;
- padding:16px 22px;
+ padding:14px 20px;
  border-radius:40px;
- font-weight:600;
- text-decoration:none;
- box-shadow:0 10px 30px rgba(0,0,0,.35);
+ font-weight:bold;
+ text-decoration:none
 }
 
-@media(max-width:768px){
- .hero h1{font-size:32px}
- nav{gap:18px;font-size:14px}
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(40px);transition:.7s}
+.reveal.active{opacity:1;transform:none}
+
+@media(max-width:600px){
+ .hero h1{font-size:34px}
 }
 </style>
 </head>
@@ -229,6 +224,7 @@ footer{
 
 <nav>
  <a href="#about">About</a>
+ <a href="#why">Why Me</a>
  <a href="#skills">Skills</a>
  <a href="#experience">Experience</a>
  <a href="#contact">Contact</a>
@@ -237,76 +233,93 @@ footer{
 <div class="toggle" onclick="toggleMode()">🌓</div>
 
 <!-- HERO -->
-<div class="hero">
- <div class="badge">Available for IT Support Roles</div>
- <h1>Rahul <span>Salve</span></h1>
+<div class="hero reveal">
+ <h1>Hi, I'm <span>Rahul Salve</span></h1>
  <h3>System & IT Support Engineer</h3>
  <p>
-  3+ years of enterprise IT support experience in desktop troubleshooting,
-  networking, Windows systems and corporate IT operations.
+ Keeping business running by solving IT issues before they become problems.
  </p>
 
- <div class="actions">
-  <a class="btn" href="Rahul_Salve_Resume.pdf" onclick="gtag('event','resume_download')">⬇ Download Resume</a>
-  <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view" target="_blank">👁 View Resume</a>
+ <div class="snapshot">
+  <div class="snap">📍 Surat, Gujarat</div>
+  <div class="snap">💼 3+ Years Experience</div>
+  <div class="snap">🏢 Corporate IT Support</div>
+  <div class="snap">🟢 Open to Opportunities</div>
+ </div>
+
+ <a class="btn" href="Rahul_Salve_Resume.pdf"
+ onclick="gtag('event','resume_download')">⬇ Download Resume</a>
+
+ <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
+ target="_blank">👁 View Resume</a>
+
+ <div class="social">
+  <a href="https://www.linkedin.com/" target="_blank">🔗 LinkedIn</a>
+  <a href="https://github.com/" target="_blank">🐙 GitHub</a>
  </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="reveal">
 <h2>About Me</h2>
-<div class="card about">
-<p>
-I am an IT Support Engineer with hands-on experience in enterprise IT environments,
-supporting end users, troubleshooting systems, managing IT assets and resolving
-network-related issues. I have worked with organizations like L&T and Flipkart,
-handling critical IT operations with professionalism and reliability.
+<p style="text-align:center;max-width:850px;margin:auto;color:var(--muted)">
+IT Support Engineer with strong hands-on experience in enterprise environments.
+Worked with organizations like L&T and Flipkart, providing reliable desktop,
+network, hardware and system support with professional communication.
 </p>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="why" class="reveal">
+<h2>Why Hire Me</h2>
+<div class="why">
+ <div>⚡ Fast issue resolution with minimal downtime</div>
+ <div>🏢 Real corporate IT experience</div>
+ <div>🧠 Strong troubleshooting mindset</div>
+ <div>🤝 Professional user communication</div>
 </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="reveal">
 <h2>Skills</h2>
 <div class="skills">
  <div class="skill">💻 Desktop & End User Support</div>
- <div class="skill">🌐 Networking (LAN / WAN / TCP-IP)</div>
- <div class="skill">🪟 Windows 10 / 11 & Office 365</div>
- <div class="skill">☁ Cloud Tools & Email Support</div>
- <div class="skill">🛠 Hardware & Software Troubleshooting</div>
+ <div class="skill">🌐 Networking (LAN / TCP-IP)</div>
+ <div class="skill">🪟 Windows 10/11 & O365</div>
+ <div class="skill">🛠 Hardware & Software</div>
  <div class="skill">📡 Printer & Peripheral Support</div>
+ <div class="skill">☁️ Cloud & Email Tools</div>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" class="reveal">
 <h2>Experience</h2>
-<div class="card timeline">
+<div class="timeline">
  <div>
-  <strong>System Engineer – Flipkart (2024 – Present)</strong>
-  <p>L1/L2 IT support, system troubleshooting, installations and user assistance.</p>
+  <strong>System Engineer – Flipkart (2024–Present)</strong>
+  <p>Enterprise IT support, installations, troubleshooting.</p>
  </div>
  <div>
-  <strong>Desktop Support Engineer – L&T (2023 – 2024)</strong>
-  <p>Desktop, networking, printer support and IT operations.</p>
+  <strong>Desktop Support – L&T (2023–2024)</strong>
+  <p>Network, system and end-user support.</p>
  </div>
  <div>
-  <strong>Apprentice – L&T (2022 – 2023)</strong>
-  <p>Hands-on exposure to corporate IT infrastructure.</p>
+  <strong>Apprentice – L&T (2022–2023)</strong>
+  <p>Corporate IT infrastructure exposure.</p>
  </div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Let’s Connect</h2>
-
+<section id="contact" class="reveal">
+<h2>Contact Me</h2>
 <form id="contactForm">
  <input id="name" placeholder="Your Name" required>
  <input id="email" type="email" placeholder="Your Email" required>
  <textarea id="message" placeholder="Message" required></textarea>
-
- <button type="submit">Send Message 🚀</button>
+ <button type="submit">Send Message</button>
  <div class="loader">⏳ Sending...</div>
  <div class="success">✅ Message sent successfully</div>
  <div class="error">❌ Error! Try again</div>
@@ -314,8 +327,7 @@ handling critical IT operations with professionalism and reliability.
 </section>
 
 <footer>
-© 2025 Rahul Salve • System & IT Support Engineer  
-<br>Designed & Maintained by Rahul Salve
+© 2025 Rahul Salve · IT Support Engineer  
 </footer>
 
 <a class="whatsapp"
@@ -333,22 +345,29 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
  document.querySelector(".loader").style.display="block";
 
  var params={
-  from_name:document.getElementById("name").value,
-  from_email:document.getElementById("email").value,
-  message:document.getElementById("message").value
+  from_name:name.value,
+  from_email:email.value,
+  message:message.value
  };
 
  emailjs.send("service_g20uiby","template_6nlns0b",params)
  .then(()=>{
-  emailjs.send("service_g20uiby","template_r6kb4c6",params);
-  gtag('event','contact_form_submit');
+  gtag('event','contact_submit');
   document.querySelector(".loader").style.display="none";
   document.querySelector(".success").style.display="block";
-  document.querySelector(".error").style.display="none";
   e.target.reset();
  },()=>{
   document.querySelector(".loader").style.display="none";
   document.querySelector(".error").style.display="block";
+ });
+});
+
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+ reveals.forEach(r=>{
+  const top=r.getBoundingClientRect().top;
+  if(top<window.innerHeight-80) r.classList.add('active');
  });
 });
 </script>

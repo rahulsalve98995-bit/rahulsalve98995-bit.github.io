@@ -7,151 +7,107 @@
 <title>Rahul Salve | IT Support Engineer</title>
 
 <!-- SEO -->
-<meta name="description" content="Rahul Salve – System & IT Support Engineer Portfolio">
+<meta name="description" content="Rahul Salve - System & IT Support Engineer Portfolio">
 <meta name="keywords" content="Rahul Salve, IT Support Engineer, Desktop Support">
 <meta name="author" content="Rahul Rajendra Salve">
+
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="oEe2eBX6B039nNjy_i0pC9W1kHTqxrPj4Q74cCakk2A" />
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MGH131L0"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L8MGH131L0');
-</script>
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
- emailjs.init("_jDGSZ1kuG7V7XuGf");
-})();
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L8MGH131L0');
 </script>
 
 <style>
-:root{
- --bg:#0f2027;
- --text:#ffffff;
- --card:#162f3a;
- --accent:#00e5ff;
-}
-.light{
- --bg:#f4f4f4;
- --text:#111;
- --card:#ffffff;
- --accent:#007bff;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:var(--bg);color:var(--text);transition:.3s}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0f2027;color:#fff}
+html{scroll-behavior:smooth}
 
+/* Navbar */
 nav{
  position:fixed;top:0;width:100%;
- display:flex;justify-content:center;gap:25px;
- background:#000;padding:15px;z-index:10
+ background:#000;display:flex;
+ justify-content:center;gap:25px;
+ padding:15px;z-index:1000
 }
-nav a{color:var(--accent);text-decoration:none;font-weight:bold}
-nav a:hover{opacity:.7}
+nav a{color:#00e5ff;text-decoration:none;font-weight:bold}
 
-.toggle{
- position:fixed;top:15px;right:15px;
- background:var(--accent);color:#000;
- border:none;padding:8px 14px;
- border-radius:20px;cursor:pointer;font-weight:bold
-}
-
+/* Hero */
 .hero{
- height:100vh;display:flex;flex-direction:column;
- align-items:center;justify-content:center;text-align:center
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding-top:60px
 }
 .hero h1{font-size:42px}
-.hero span{color:var(--accent)}
+.hero span{color:#00e5ff}
+.hero p{margin-top:10px;font-size:18px}
 
+/* Buttons */
 .btn{
- margin-top:20px;padding:14px 28px;
- background:var(--accent);color:#000;
- border-radius:30px;text-decoration:none;
- font-weight:bold;display:inline-block
+ margin-top:20px;
+ padding:12px 30px;
+ background:#00e5ff;
+ color:#000;
+ text-decoration:none;
+ border-radius:30px;
+ font-weight:bold;
+ display:inline-block;
+ transition:.3s
 }
-.btn:hover{transform:scale(1.05)}
+.btn:hover{transform:scale(1.05);background:#00bcd4}
 
-section{max-width:1000px;margin:auto;padding:80px 20px}
-h2{color:var(--accent);margin-bottom:20px}
+/* Sections */
+section{
+ max-width:1000px;
+ margin:auto;
+ padding:80px 20px
+}
+h2{color:#00e5ff;margin-bottom:20px}
 
-.skills{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
- gap:20px
-}
-.skill{
- background:var(--card);
- padding:20px;border-radius:12px;text-align:center
-}
-.skill i{font-size:30px;color:var(--accent)}
-
-form{
- background:var(--card);
- padding:25px;border-radius:12px
-}
-input,textarea{
- width:100%;padding:12px;margin-bottom:12px;
- border:none;border-radius:6px
-}
-button{
- width:100%;padding:14px;
- background:var(--accent);border:none;
- border-radius:30px;font-weight:bold;cursor:pointer
-}
-button:hover{opacity:.8}
-
-.popup{
- position:fixed;inset:0;
- background:rgba(0,0,0,.7);
- display:none;align-items:center;justify-content:center
-}
-.popup div{
- background:var(--card);
- padding:30px;border-radius:12px;
- text-align:center;animation:pop .4s
-}
-@keyframes pop{
- from{transform:scale(.5);opacity:0}
- to{transform:scale(1);opacity:1}
+/* Timeline */
+.timeline{border-left:3px solid #00e5ff;padding-left:30px}
+.event{margin-bottom:20px;position:relative}
+.event::before{
+ content:"";
+ width:14px;height:14px;
+ background:#00e5ff;
+ border-radius:50%;
+ position:absolute;left:-38px;top:5px
 }
 
+/* Footer */
+footer{
+ background:#000;
+ padding:20px;
+ text-align:center
+}
+
+/* WhatsApp */
 .whatsapp{
- position:fixed;bottom:20px;right:20px;
- background:#25D366;color:#fff;
- padding:14px 18px;border-radius:50px;
- text-decoration:none;font-weight:bold
+ position:fixed;
+ bottom:20px;right:20px;
+ background:#25D366;
+ color:#fff;
+ padding:14px 20px;
+ border-radius:50px;
+ text-decoration:none;
+ font-weight:bold
 }
 
-@media(max-width:600px){
- .hero h1{font-size:32px}
+/* Mobile */
+@media(max-width:768px){
+.hero h1{font-size:32px}
+nav{gap:15px}
 }
-
-.resume-modal{
- position:fixed; inset:0;
- background:rgba(0,0,0,.8);
- display:none; align-items:center; justify-content:center;
- z-index:999;
-}
-.resume-box{
- width:90%; height:90%;
- background:#000; border-radius:10px;
- position:relative;
- animation:pop .4s ease;
-}
-.resume-box iframe{
- width:100%; height:100%;
- border:none; border-radius:10px;
-}
-.close{
- position:absolute; top:10px; right:15px;
- color:#fff; font-size:22px;
- cursor:pointer;
-}
-
-  
 </style>
 </head>
 
@@ -159,121 +115,70 @@ button:hover{opacity:.8}
 
 <nav>
  <a href="#about">About</a>
- <a href="#skills">Skills</a>
+ <a href="#experience">Experience</a>
  <a href="#contact">Contact</a>
 </nav>
 
-<button class="toggle" onclick="toggleMode()">🌙</button>
-
+<!-- HERO -->
 <div class="hero">
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
  <p>System & IT Support Engineer</p>
 
  <!-- Resume Buttons -->
-<div style="margin-top:20px;">
-  <a href="Rahul_Salve_Resume.pdf"
-     download
-     class="btn"
-     onclick="gtag('event','resume_download')">
-     ⬇ Download Resume
-  </a>
-
-  <button class="btn" style="margin-left:10px" onclick="openResume()">
-    👁 View Resume
-  </button>
-</div>
-
-<!-- Resume Modal -->
-<div id="resumeModal" class="resume-modal">
-  <div class="resume-box">
-    <span class="close" onclick="closeResume()">✖</span>
-    <iframe src="Rahul_Salve_Resume.pdf"></iframe>
-  </div>
-</div>
-
-</div>
-
-<section id="about">
-<h2>About Me</h2>
-<p>Experienced IT Support Engineer with strong hands-on skills in Desktop Support, Networking and Cloud tools.</p>
-</section>
-
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills">
- <div class="skill"><i>💻</i><p>Desktop Support</p></div>
- <div class="skill"><i>🌐</i><p>Networking</p></div>
- <div class="skill"><i>☁️</i><p>Cloud & O365</p></div>
- <div class="skill"><i>🖥</i><p>Windows / Linux</p></div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<form onsubmit="sendMail(event)">
-<input id="name" placeholder="Your Name" required>
-<input id="email" type="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
-
-<footer style="text-align:center;padding:20px;background:#000">
-© 2025 Rahul Salve
-</footer>
-
-<a class="whatsapp"
-href="https://wa.me/917016748153"
-onclick="gtag('event','whatsapp_click')"
-target="_blank">💬 WhatsApp</a>
-
-<div class="popup" id="popup">
  <div>
-  <h3>✅ Message Sent!</h3>
-  <p>Auto-reply sent on your email.</p>
+   <a href="Rahul_Salve_Resume.pdf"
+      download
+      class="btn"
+      onclick="gtag('event','resume_download')">
+      ⬇ Download Resume
+   </a>
+
+   <a href="Rahul_Salve_Resume.pdf"
+      target="_blank"
+      class="btn"
+      style="margin-left:10px"
+      onclick="gtag('event','resume_view')">
+      👁 View Resume
+   </a>
  </div>
 </div>
 
-<script>
-function toggleMode(){
- document.body.classList.toggle("light");
-}
+<!-- ABOUT -->
+<section id="about">
+ <h2>About Me</h2>
+ <p>
+ IT Support Engineer with 3+ years of experience in Desktop Support,
+ Networking, Windows OS, Office 365, troubleshooting and system administration.
+ </p>
+</section>
 
-function sendMail(e){
- e.preventDefault();
+<!-- EXPERIENCE -->
+<section id="experience">
+ <h2>Experience</h2>
+ <div class="timeline">
+  <div class="event">2024 – Present: System Engineer @ Flipkart</div>
+  <div class="event">2023 – 2024: Desktop Support Engineer @ L&T</div>
+  <div class="event">2022 – 2023: Apprentice @ L&T</div>
+ </div>
+</section>
 
- let params={
-  from_name:name.value,
-  from_email:email.value,
-  message:message.value,
-  whatsapp:"https://wa.me/917016748153"
- };
+<!-- CONTACT -->
+<section id="contact">
+ <h2>Contact</h2>
+ <p>Email: rahulsalve98995@gmail.com</p>
+ <p>Phone: +91 7016748153</p>
+</section>
 
- emailjs.send("service_g20uiby","template_6nlns0b",params)
- .then(()=>{
-   emailjs.send("service_g20uiby","template_r6kb4c6",params);
+<footer>
+ © 2025 Rahul Rajendra Salve
+</footer>
 
-   gtag('event','contact_form_submit');
-   gtag('event','auto_reply_sent');
+<a class="whatsapp"
+ href="https://wa.me/917016748153?text=Hi Rahul, I saw your portfolio"
+ target="_blank"
+ onclick="gtag('event','whatsapp_click')">
+ 💬 WhatsApp
+</a>
 
-   document.getElementById("popup").style.display="flex";
-   e.target.reset();
-   setTimeout(()=>popup.style.display="none",3000);
- });
-}
-</script>
-
-<script>
-function openResume(){
- document.getElementById("resumeModal").style.display="flex";
- gtag('event','resume_view');
-}
-function closeResume(){
- document.getElementById("resumeModal").style.display="none";
-}
-</script>
-
-  
 </body>
 </html>
-

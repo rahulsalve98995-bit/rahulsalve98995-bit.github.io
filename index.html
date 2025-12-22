@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahul Salve | IT Support Engineer</title>
+
+<title>Rahul Salve | System & IT Support Engineer</title>
+
+<!-- SEO -->
+<meta name="description" content="Rahul Salve – System & IT Support Engineer with 3+ years experience in Desktop Support, Networking, Windows OS, Office 365 and Cloud Tools.">
+<meta name="keywords" content="Rahul Salve, IT Support Engineer, Desktop Support, System Engineer, Windows Support, Networking">
+<meta name="author" content="Rahul Salve">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Rahul Salve | IT Support Engineer">
+<meta property="og:description" content="Professional IT Support Engineer Portfolio">
+<meta property="og:url" content="https://rahulsalve98995-bit.github.io/">
+<meta property="og:type" content="website">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MGH131L0"></script>
@@ -18,7 +30,7 @@ gtag('config', 'G-L8MGH131L0');
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
-  emailjs.init("_jDGSZ1kuG7V7XuGf");
+ emailjs.init("_jDGSZ1kuG7V7XuGf");
 })();
 </script>
 
@@ -35,6 +47,7 @@ gtag('config', 'G-L8MGH131L0');
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:var(--bg);color:var(--text);transition:.3s}
 
+/* Navbar */
 nav{
  position:fixed;top:0;width:100%;
  background:#000;padding:15px;
@@ -42,33 +55,39 @@ nav{
 }
 nav a{color:var(--accent);text-decoration:none;font-weight:bold}
 
-.toggle{position:fixed;top:15px;right:20px;cursor:pointer}
+/* Toggle */
+.toggle{
+ position:fixed;top:15px;right:20px;
+ cursor:pointer;font-size:20px
+}
 
+/* Hero */
 .hero{
- min-height:100vh;
+ height:100vh;
  display:flex;
  flex-direction:column;
  justify-content:center;
  align-items:center;
  text-align:center;
- padding:20px
 }
 .hero span{color:var(--accent)}
-.hero p{max-width:700px;margin-top:10px;opacity:.9}
 
 .btn{
- margin:10px;padding:12px 30px;
- background:var(--accent);color:#000;
- border-radius:30px;text-decoration:none;font-weight:bold;
- transition:.3s;display:inline-block
+ margin:10px;
+ padding:12px 30px;
+ background:var(--accent);
+ color:#000;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+ transition:.3s
 }
-.btn:hover{transform:scale(1.05)}
+.btn:hover{transform:scale(1.08)}
 
 section{max-width:1000px;margin:auto;padding:80px 20px}
 h2{color:var(--accent);margin-bottom:20px}
 
-.about p{line-height:1.7}
-
+/* Skills */
 .skills{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -81,44 +100,45 @@ h2{color:var(--accent);margin-bottom:20px}
  text-align:center
 }
 
-.timeline{
- border-left:3px solid var(--accent);
- padding-left:25px
-}
-.timeline div{
- margin-bottom:20px
-}
-
+/* Contact */
 form{max-width:500px;margin:auto}
 input,textarea{
- width:100%;padding:12px;
+ width:100%;
+ padding:12px;
  margin-bottom:12px;
- border-radius:8px;border:none
+ border-radius:8px;
+ border:none
 }
 button{
- width:100%;padding:14px;
- border:none;border-radius:30px;
+ width:100%;
+ padding:14px;
+ border:none;
+ border-radius:30px;
  background:var(--accent);
- font-weight:bold;cursor:pointer
+ font-weight:bold;
+ cursor:pointer
 }
-
-.loader,.success,.error{
- display:none;text-align:center;margin-top:10px
-}
+.loader,.success,.error{text-align:center;display:none}
 .success{color:#4CAF50}
 .error{color:#ff5252}
 
-footer{
- text-align:center;
- padding:20px;
- background:#000
+/* WhatsApp */
+.whatsapp{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ background:#25D366;
+ color:white;
+ padding:14px 20px;
+ border-radius:40px;
+ text-decoration:none;
+ font-weight:bold
 }
 
-.whatsapp{
- position:fixed;bottom:20px;right:20px;
- background:#25D366;color:white;
- padding:14px 20px;border-radius:40px;
- text-decoration:none;font-weight:bold
+/* Mobile */
+@media(max-width:600px){
+ nav{gap:15px;font-size:14px}
+ .hero h1{font-size:26px}
 }
 </style>
 </head>
@@ -128,7 +148,6 @@ footer{
 <nav>
  <a href="#about">About</a>
  <a href="#skills">Skills</a>
- <a href="#experience">Experience</a>
  <a href="#contact">Contact</a>
 </nav>
 
@@ -137,27 +156,39 @@ footer{
 <!-- HERO -->
 <div class="hero">
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
- <h3>System & IT Support Engineer</h3>
- <p>
- Reliable IT Support Engineer with 3+ years of experience in enterprise IT environments,
- specializing in desktop support, networking, and system troubleshooting.
- </p>
+ <p>System & IT Support Engineer</p>
 
  <a class="btn" href="Rahul_Salve_Resume.pdf"
- onclick="gtag('event','resume_download')">⬇ Download Resume</a>
+    onclick="gtag('event','resume_download')"
+    download>
+    ⬇ Download Resume
+ </a>
 
- <a class="btn" href="https://drive.google.com/file/d/1wswVK_c-iwfJctoooVZTzweAoMi2lbRS/view"
- target="_blank">👁 View Resume</a>
+ <a class="btn" href="Rahul_Salve_Resume.pdf" target="_blank">
+    👁 View Resume
+ </a>
+
+ <div>
+  <a class="btn" href="https://www.linkedin.com/in/rahul-salve"
+     target="_blank"
+     onclick="gtag('event','linkedin_click')">
+     🔗 LinkedIn
+  </a>
+
+  <a class="btn" href="https://github.com/rahulsalve98995-bit"
+     target="_blank"
+     onclick="gtag('event','github_click')">
+     💻 GitHub
+  </a>
+ </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="about">
+<section id="about">
 <h2>About Me</h2>
 <p>
-I am an IT Support Engineer with hands-on experience in desktop support,
-hardware & software troubleshooting, networking, and end-user support.
-I have worked in corporate environments such as L&T and Flipkart,
-supporting users and maintaining IT infrastructure efficiently.
+System & IT Support Engineer with 3+ years of experience in enterprise IT support,
+desktop troubleshooting, networking, Windows OS, Office 365 and cloud tools.
 </p>
 </section>
 
@@ -165,61 +196,51 @@ supporting users and maintaining IT infrastructure efficiently.
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
- <div class="skill">💻 Desktop & End User Support</div>
- <div class="skill">🌐 Networking (LAN / WAN / TCP-IP)</div>
- <div class="skill">🪟 Windows 10 / 11 & Office 365</div>
- <div class="skill">☁️ Cloud Tools & Email Support</div>
- <div class="skill">🛠 Hardware & Software Troubleshooting</div>
- <div class="skill">📡 Printer & Peripheral Support</div>
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-<div class="timeline">
- <div>
-  <strong>System Engineer – Flipkart (2024 – Present)</strong>
-  <p>Providing L1/L2 IT support, system troubleshooting, installations and user assistance.</p>
- </div>
- <div>
-  <strong>Desktop Support Engineer – L&T (2023 – 2024)</strong>
-  <p>Desktop, network, printer support and enterprise IT operations.</p>
- </div>
- <div>
-  <strong>Apprentice – L&T (2022 – 2023)</strong>
-  <p>Hands-on experience in corporate IT infrastructure and support tasks.</p>
- </div>
+ <div class="skill">💻 Desktop Support</div>
+ <div class="skill">🌐 Networking</div>
+ <div class="skill">🪟 Windows & O365</div>
+ <div class="skill">☁ Cloud Tools</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Me</h2>
-<p style="text-align:center;margin-bottom:20px">
-If you are looking for a reliable IT Support Engineer, feel free to contact me.
-</p>
-
 <form id="contactForm">
  <input id="name" placeholder="Your Name" required>
  <input id="email" type="email" placeholder="Your Email" required>
  <textarea id="message" placeholder="Message" required></textarea>
+
  <button type="submit">Send Message</button>
+
  <div class="loader">⏳ Sending...</div>
- <div class="success">✅ Message sent successfully</div>
+ <div class="success">🎉 Message Sent Successfully</div>
  <div class="error">❌ Error! Try again</div>
 </form>
 </section>
 
-<footer>
-© 2025 Rahul Salve | IT Support Engineer  
-<br>Designed & Maintained by Rahul Salve
-</footer>
-
 <a class="whatsapp"
  href="https://wa.me/917016748153"
  onclick="gtag('event','whatsapp_click')"
- target="_blank">💬 WhatsApp</a>
+ target="_blank">
+ 💬 WhatsApp
+</a>
+
+<!-- SEO Structured Data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Rahul Salve",
+ "jobTitle": "System & IT Support Engineer",
+ "email": "mailto:rahulsalve98995@gmail.com",
+ "url": "https://rahulsalve98995-bit.github.io/",
+ "sameAs": [
+  "https://www.linkedin.com/in/rahul-salve",
+  "https://github.com/rahulsalve98995-bit"
+ ]
+}
+</script>
 
 <script>
 function toggleMode(){
@@ -230,10 +251,10 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
  e.preventDefault();
  document.querySelector(".loader").style.display="block";
 
- var params = {
-  from_name: document.getElementById("name").value,
-  from_email: document.getElementById("email").value,
-  message: document.getElementById("message").value
+ var params={
+  name:document.getElementById("name").value,
+  email:document.getElementById("email").value,
+  message:document.getElementById("message").value
  };
 
  emailjs.send("service_g20uiby","template_6nlns0b",params)
@@ -242,8 +263,7 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
    gtag('event','contact_form_submit');
    document.querySelector(".loader").style.display="none";
    document.querySelector(".success").style.display="block";
-   document.querySelector(".error").style.display="none";
-   e.target.reset();
+   document.getElementById("contactForm").reset();
  },()=>{
    document.querySelector(".loader").style.display="none";
    document.querySelector(".error").style.display="block";

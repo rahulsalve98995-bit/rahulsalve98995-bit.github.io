@@ -128,6 +128,30 @@ button:hover{opacity:.8}
 @media(max-width:600px){
  .hero h1{font-size:32px}
 }
+
+.resume-modal{
+ position:fixed; inset:0;
+ background:rgba(0,0,0,.8);
+ display:none; align-items:center; justify-content:center;
+ z-index:999;
+}
+.resume-box{
+ width:90%; height:90%;
+ background:#000; border-radius:10px;
+ position:relative;
+ animation:pop .4s ease;
+}
+.resume-box iframe{
+ width:100%; height:100%;
+ border:none; border-radius:10px;
+}
+.close{
+ position:absolute; top:10px; right:15px;
+ color:#fff; font-size:22px;
+ cursor:pointer;
+}
+
+  
 </style>
 </head>
 
@@ -145,8 +169,28 @@ button:hover{opacity:.8}
  <h1>Hi, I'm <span>Rahul Salve</span></h1>
  <p>System & IT Support Engineer</p>
 
- <a href="Rahul_Salve_Resume.pdf" class="btn"
- onclick="gtag('event','resume_download')">Download Resume</a>
+ <!-- Resume Buttons -->
+<div style="margin-top:20px;">
+  <a href="Rahul_Salve_Resume.pdf"
+     download
+     class="btn"
+     onclick="gtag('event','resume_download')">
+     ⬇ Download Resume
+  </a>
+
+  <button class="btn" style="margin-left:10px" onclick="openResume()">
+    👁 View Resume
+  </button>
+</div>
+
+<!-- Resume Modal -->
+<div id="resumeModal" class="resume-modal">
+  <div class="resume-box">
+    <span class="close" onclick="closeResume()">✖</span>
+    <iframe src="Rahul_Salve_Resume.pdf"></iframe>
+  </div>
+</div>
+
 </div>
 
 <section id="about">
@@ -219,5 +263,17 @@ function sendMail(e){
 }
 </script>
 
+<script>
+function openResume(){
+ document.getElementById("resumeModal").style.display="flex";
+ gtag('event','resume_view');
+}
+function closeResume(){
+ document.getElementById("resumeModal").style.display="none";
+}
+</script>
+
+  
 </body>
 </html>
+
